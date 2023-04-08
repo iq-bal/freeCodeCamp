@@ -1,3 +1,9 @@
+// problem link
+// https://structy.net/problems/has-path
+
+
+
+
 // const hasPath = (graph,src, dst) =>{
 //     if(src==dst)    return true;
 
