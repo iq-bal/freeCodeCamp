@@ -27,23 +27,23 @@ int main(){
         g[v1].push_back(v2);
         g[v2].push_back(v1); 
     }
-    int count =0;
+    // int count =0;
     for (int i = 1; i <= n; i++)
     {
         if(vis[i])  continue;
         current_cc.clear(); 
         dfs(i);
         cc.push_back(current_cc); 
-        count++; 
+        // count++; 
     }
     // cout<< count<< endl; 
     // no of connected components 
-
+    cout<< cc.size()<<endl; 
     for(auto i : cc){
         for(int vertex : i){
             cout<< vertex << endl; 
         }
     }
 
-    
+
 }
