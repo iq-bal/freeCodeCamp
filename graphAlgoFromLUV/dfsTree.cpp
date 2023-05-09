@@ -19,7 +19,7 @@ void dfs(int vertex){
     }
 }
 
-// we dont need visited array for tree dfs . though the 'dfs' code also work in case of tree. we can just optimize it. 
+// we dont need visited array for tree dfs . though the 'dfs' code also work in case of tree. we can just optimize it. we dont need visited array anymore  
 
 void tree_dfs(int vertex,int par=0){
 
@@ -28,6 +28,7 @@ void tree_dfs(int vertex,int par=0){
         depth[child]= depth[vertex]+1; // take action on child before entering the child node 
         tree_dfs(child,vertex); 
         height[vertex] = max(height[vertex],height[child]+1); // take action on child after exiting the child node 
+        // here what it is doing is comparing height of current children and previous height of a node from other child 
     }
 }
 
